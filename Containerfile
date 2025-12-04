@@ -10,9 +10,8 @@ RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 # Copy requirements and build with pip
-COPY requirements.txt ./
-RUN pip install -r requirements.txt
-
+COPY ./requirements.txt /app/requirements.txt
+RUN pip install -Ur requirements.txt
 
 
 # RUNTIME
