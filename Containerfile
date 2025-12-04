@@ -1,6 +1,7 @@
 # BUILDER
 FROM python:3.9-slim as compiler
 LABEL org.opencontainers.image.source="https://github.com/oats-center/ASREC"
+ENV PYTHONUNBUFFERED 1
 WORKDIR /usr/src/app
 
 # Activate virtualenv
